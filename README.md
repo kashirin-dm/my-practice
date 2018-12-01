@@ -7,3 +7,6 @@ You should not be serious about the quality of the code in these projects
 ### div-platformer-game
 This is really small platformer game on jQuery and simple DIVs. No Canvas, No best-practices.
 Stupid and fun.
+
+### to-do-list
+Simple TO-DO List on pure JS and LocalStorage.
