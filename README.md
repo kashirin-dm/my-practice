@@ -10,3 +10,11 @@ Stupid and fun.
 
 ### to-do-list
 Simple TO-DO List on pure JS and LocalStorage.
+
+### honey
+A simple SPA based on Vue.js.
+A simple reactive form with validation on the client side and a nice adaptive layout base on the Bootstrap 4.
+
+After filling out the form, your comment is sent to Firebase and show the bottom of the page. If something changes in the database, then it also instantly changes on the page.
+
+You can run 'honey/dist/index.html' to try it in action.
