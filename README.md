@@ -4,7 +4,7 @@ Various practical mini-projects for fun and experience
 It's my little portfolio
 You should not be serious about the quality of the code in these projects
 
-
+------
 ### div-platformer-game  [ jQuery, JS, HTML5 ]
 This is really small platformer game on jQuery and simple DIVs. No Canvas, No best-practices.
 Stupid and fun.
@@ -20,7 +20,7 @@ A simple reactive form with validation on the client side and a nice adaptive la
 
 After filling out the form, your comment is sent to Firebase and show the bottom of the page. If something changes in the database, then it also instantly changes on the page.
 
-You can run 'honey/dist/index.html' to try it in action.
+You can run '*honey/dist/index.html*' to try it in action.
 
 
 ### (~Soon~) vue-asana  [ Vue.js, JS, Firebase + Vuefire, Vuex, Vue Router, SCSS, HTML5 ]
