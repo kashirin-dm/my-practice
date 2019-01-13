@@ -1,0 +1,47 @@
+// ~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~ GENERAL STYLES
+// ~~~~~~~~~~~~~~~~~~~~~~
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+}
+html,
+body {
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    line-height: normal;
+	text-rendering: optimizeLegibility;
+	color: #151b26;
+}
+img {border: 0;}
+a {
+	text-decoration: none;
+}
+.background {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+	z-index: -1;
+	background-color: #f6f8f9;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-y: 50%;
+    background-image: url(../bg.jpg);
+}
+.container {
+	bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+	z-index: 0;
+}
+.ui {
+	min-height: 1px;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	height: 100%;
+}

@@ -1,0 +1,255 @@
+@import 'general';
+@import 'sidebar';
+
+// ~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~ MAIN BLOCK
+// ~~~~~~~~~~~~~~~~~~~~~~
+.main {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 70px 1fr;
+	grid-column: 2;
+	height: 100%;
+}
+
+@import 'topbar';
+
+
+.main-wrapper {
+	display: flex;
+    flex-direction: column;
+    min-height: 1px;
+    position: relative;
+}
+.main-board {
+	height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.board {
+	height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+	background-image: linear-gradient(rgba(0,0,0,0.3), transparent 30%);
+
+	aside {
+		align-items: flex-start;
+		display: flex;
+		font-size: 11px;
+		height: 35px;
+		justify-content: flex-end;
+		margin: 15px 20px 0;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		a {
+			color: rgba(255,255,255,0.9);
+			fill: rgba(255,255,255,0.9);
+			align-items: center;
+			border-radius: 4px;
+			display: flex;
+			font-size: 12px;
+			font-weight: 500;
+			padding: 5px 10px;
+			font-size: 12px;
+			font-weight: 500;
+			z-index: 300;
+
+			&:hover {
+				background-color: rgba(237,241,242,0.3);
+			}
+		}
+		
+		.completion-menu {
+			.left-icon {
+				margin-right: 5px;
+				align-items: center;
+				display: inline-flex;
+				
+				svg {
+					height: 12px;
+    				width: 12px;
+				}
+			}
+			.right-icon {
+				margin-left: 5px;
+				align-items: center;
+				display: inline-flex;
+
+				svg {
+					height: 12px;
+    				width: 12px;
+				}
+			}
+		}
+
+		.sort-menu {
+			margin-left: 5px;
+			.left-icon {
+				margin-right: 5px;
+				align-items: center;
+				display: inline-flex;
+
+				svg {
+					height: 12px;
+    				width: 12px;
+				}
+			}
+			.right-icon {
+				margin-left: 5px;
+				align-items: center;
+				display: inline-flex;
+				
+				svg {
+					height: 12px;
+    				width: 12px;
+				}
+			}
+		}
+
+		.setting-menu {
+			margin-left: 5px;
+
+			svg {
+				height: 16px;
+    			width: 16px;
+			}
+		}
+	}
+}
+
+main {
+	height: 100%;
+}
+
+@import 'welcome-banner';
+
+.board__scrollable {
+	min-width: 1px;
+	overflow-x: auto;
+	
+	height: 100%;
+	padding: 10px 10px 0;
+	
+	padding-top: 50px;
+	position: relative;
+	min-width: 1px;
+	box-sizing: border-box;
+}
+
+.board__description-button {
+	left: 10px;
+    position: absolute;
+	top: 15px;
+	color: #fff;
+	align-items: center;
+    border-radius: 4px;
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+	padding: 5px 10px;
+	
+	&:hover {
+		cursor: pointer;
+		background-color: rgba(237,241,242,0.3);
+	}
+}
+
+.board__body {
+    transform: translateX(0);
+	transition: transform 200ms;
+	display: flex;
+    flex-direction: row;
+    height: 100%;
+
+	&--opened {
+		transform: translateX(310px);
+	}
+
+	&__column-description{
+		display: flex;
+		flex: 0 0 300px;
+		flex-direction: column;
+		height: 100%;
+		max-width: 300px;
+		padding: 0 10px;
+		width: 300px;
+		left: -310px;
+		padding-right: 20px;
+		padding-top: 35px;
+		position: absolute;
+		box-sizing: border-box;
+
+		&::after {
+			content: "";
+			background: #fff;
+			bottom: 20px;
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 35px;
+			width: 1px;
+		}
+	}
+}
+
+.project-description {
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.15);
+	cursor: auto;
+	display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    overflow: hidden;
+    padding: 15px;
+	position: relative;
+	background: #fff;
+	border-radius: 4px;
+	
+	&__header {
+		color: #848f99;
+		font-size: 12px;
+		font-weight: 500;
+		margin-bottom: 10px;
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		min-height: 1px;
+		position: relative;
+	
+		.empty-message {
+			color: #9ca6af;
+    		cursor: pointer;
+		}
+	}
+}
+
+.board__body__scrollable-lists {
+	display: flex;
+	flex: 0 0 35px;
+	height: 100%;
+
+	&::after {
+		content: "";
+		flex: 0 0 10px;
+	}
+}
+.scrollable-lists__inner {
+	display: flex;
+	flex: 0 0 100%;
+	flex-direction: row;
+    height: 100%;
+    min-width: 1px;
+	width: 100%;
+}
+
+@import 'column';
+
+@import 'card';
+
+@import 'scrollbar';
