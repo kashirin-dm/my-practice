@@ -1,0 +1,134 @@
+@import "~bootstrap/scss/bootstrap";
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('../fonts/BrandonGrotesque-Bold.eot');
+    src: local('Brandon Grotesque Bold'), local('BrandonGrotesque-Bold'),
+        url('../fonts/BrandonGrotesque-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BrandonGrotesque-Bold.woff') format('woff'),
+        url('../fonts/BrandonGrotesque-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('../fonts/BrandonGrotesque-Light.eot');
+    src: local('Brandon Grotesque Light'), local('BrandonGrotesque-Light'),
+        url('../fonts/BrandonGrotesque-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BrandonGrotesque-Light.woff') format('woff'),
+        url('../fonts/BrandonGrotesque-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('../fonts/BrandonGrotesque-Medium.eot');
+    src: local('Brandon Grotesque Medium'), local('BrandonGrotesque-Medium'),
+        url('../fonts/BrandonGrotesque-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BrandonGrotesque-Medium.woff') format('woff'),
+        url('../fonts/BrandonGrotesque-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('../fonts/BrandonGrotesque-Regular.eot');
+    src: local('Brandon Grotesque Regular'), local('BrandonGrotesque-Regular'),
+        url('../fonts/BrandonGrotesque-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BrandonGrotesque-Regular.woff') format('woff'),
+        url('../fonts/BrandonGrotesque-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #222;
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+p {
+  font-size: 1.2rem;
+  color: #777;
+  }
+b {font-weight: bold;}
+.screen {
+  &__first {
+    background: #352c43 url(../img/bg.jpg) no-repeat;
+    background-size: cover;
+    color: #fff;
+    min-height: 620px;
+    height:100vh;
+    h1 {
+      color: #fff;
+    }
+  }
+  &__second {
+    h2 {
+      font-size: 3.5rem;
+      color: #222;
+    }
+  }
+  &__third {
+    background-color: #fafafa;
+    h2 {
+      font-size: 3.5rem;
+      color: #222;
+    }
+  }
+  &__four {
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+  }
+  &__footer {
+    background-color: #7690c5;
+    color: #fff;
+    h2 {
+      color: #fff;
+      font-size: 3.7rem;
+    }
+    p {
+      color: #fff;
+    }
+    a {
+      font-size: 1.2rem;
+      color: #fff;
+    }
+    hr {
+      background-color: #95b0e5;
+    }
+  }
+}
+.nav-link {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.board {
+  margin-top: -5rem;
+  span {
+    font-weight: 300;
+    font-size: 2rem;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 4rem;
+  }
+  .btn {
+    font-weight: bold;
+    font-size: 1.4rem;
+    border-width: 3px;
+    padding: .8rem 4rem;
+  }
+}
