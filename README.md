@@ -23,5 +23,24 @@ After filling out the form, your comment is sent to Firebase and show the bottom
 You can run '**honey/dist/index.html**' to try it in action.
 
 ---
-### (~Soon~) vue-asana  [ Vue.js, JS, Firebase + Vuefire, Vuex, Vue Router, SCSS, HTML5 ]
-New project in progress...
+### school  [ Webpack, Bootstrap 4, Font Awesome, SCSS, HTML5 ]
+Adaptive page for example.
+
+You can run '**school/dist/index.html**' to try it in action.
+
+---
+### (in progress) vue-asana  [ Vue.js, JS, Firebase + Vuefire, Vuex, Vue Router, SCSS, HTML5 ]
+Prototype of Asana https://asana.com/ - task manager like Trello for business
+All data is written to Firebase.
+
+You can run '**vue-asana/dist/index.html**' to try it in action.
+
+---
+### (in progress) vue-simple-blog  [ Vue.js, JS, Vuex, Axios, CSS Grid, SCSS ]
+A prototype of a blog (SPA), which takes records from REST API, and has the ability to search in titles.
+The user can also change the rating. Rating generated randomly at app created and stay saved all lifecycle.
+Only 10 out of 100 posts are displayed on the screen due to pagination.
+You can open any post or click on the author and read all his posts.
+
+You can run '**vue-simple-blog/dist/index.html**' to try it in action.
+
