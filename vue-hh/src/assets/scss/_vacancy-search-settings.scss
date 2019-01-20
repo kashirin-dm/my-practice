@@ -1,0 +1,33 @@
+//
+// Настройки выдачи вакансий
+// Сортировка и доп кнопки
+//
+//
+
+.search-settings {
+    display: none;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    @media #{$media-md} {
+        display: flex;
+    }
+
+    &__filters>:first-child {
+        margin-right: 10px;
+    }
+
+    &__additional {
+        display: flex;
+    }
+
+    &__additional>:first-child {
+        margin-right: 5px;
+        display: none;
+
+        @media #{$media-lg} {
+            display: block;
+        }
+    }
+
+}

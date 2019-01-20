@@ -1,0 +1,519 @@
+//
+// Шапка
+//
+//
+.header-push {
+    display: block;
+    width: 100%;
+    height: 116px;
+}
+
+.top-sticky {
+    display: grid;
+    grid-template-rows: auto auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    &__sticky--js {
+        position: fixed;
+        top: 0;
+    }
+
+    &__top-panel {
+        font-family: 'Proxima Nova Cn Rg', Arial, Helvetica, sans-serif;
+        position: relative;
+        grid-row: 2;
+        width: 100%;
+        height: 63px;
+        padding-top: 15px;
+        background-color: #f5f5f5;
+        will-change: auto;
+
+        @media #{$media-md} {
+            grid-row: 1;
+        }
+
+        &__sticky-hide--js {
+            height: 0;
+            padding-top: 0;
+            visibility: hidden;
+        }
+
+        &__sticky-show--js {
+            height: 63px;
+            padding-top: 15px;
+            visibility: visible;
+            transition: all .2s ease;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+
+            @media #{$media-md} {
+                grid-template-columns: 90px auto 10px 48px;
+            }
+
+            @media #{$media-lg} {
+                grid-template-columns: 90px 2fr 1fr 48px;
+            }
+        }
+
+    }
+
+    &__nav-panel {
+        font-family: 'Proxima Nova Cn Rg', Arial, Helvetica, sans-serif;
+        position: relative;
+        grid-row: 1;
+        width: 100%;
+        background-color: #2c2c2c;
+        font-size: 15px;
+        min-height: 40px;
+        color: #fff;
+
+        @media #{$media-md} {
+            grid-row: 2;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 64px;
+            align-items: center;
+        }
+    }
+}
+
+//
+// Стили серой шапки
+//
+
+// Логотип
+.navi-logo {
+    display: none;
+
+    @media #{$media-md} {
+        display: inline-block;
+    }
+
+    &:hover {
+        .navi-logo__zone {
+            transition: transform .7s, -webkit-transform .7s;
+            transform: rotateY(360deg);
+        }
+    }
+
+    &__domain {
+        display: inline-block;
+        vertical-align: top;
+        width: 50px;
+        height: 48px;
+        background: url(../img/hh-kz-logo.min.svg) 0 0 no-repeat;
+    }
+
+    &__zone {
+        display: inline-block;
+        vertical-align: top;
+        width: 38px;
+        height: 38px;
+        margin: 4px 0 0 2px;
+        background: url(../img/hh-kz-logo.min.svg) -52px -4px no-repeat;
+        transform-origin: 50%;
+        transform: rotateY(0deg);
+        transition: transform 0s, -webkit-transform 0s;
+    }
+}
+
+// Блок поиска по вакансиям
+.search-group {
+    display: inline-grid;
+    grid-template-columns: 1fr 100px;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+    @media #{$media-md} {
+        grid-template-columns: 1fr auto 100px;
+        padding-left: 12px;
+    }
+
+    @media #{$media-lg} {
+        padding-left: 35px;
+    }
+
+    select {
+        display: none;
+        margin-left: -1px;
+
+        @media #{$media-md} {
+            display: inline-grid;
+        }
+    }
+
+    button {
+        font-size: 17px;
+    }
+}
+
+// Дополнительные ссылки
+.navi-cells {
+    display: none;
+    justify-content: end;
+    font-size: 13px;
+    line-height: 1;
+    color: #999;
+
+    @media #{$media-lg} {
+        display: inline-grid;
+    }
+
+    a {
+        display: inline-block;
+        font-size: 13px;
+        line-height: 1;
+        color: #999;
+        grid-row: 1;
+
+        &:hover {
+            color: #cf6b60;
+        }
+    }
+
+    .advanced-search {
+        padding-left: 10px;
+    }
+
+    .region {
+        min-width: 100px;
+        padding-left: 30px;
+        text-align: right;
+    }
+}
+
+// Выбор языка
+.navi-lang {
+    display: none;
+    justify-content: end;
+    min-width: 48px;
+    text-align: right;
+    right: -15px;
+    line-height: 18px;
+
+    @media #{$media-md} {
+        display: inline-grid;
+    }
+
+    &__lang-switcher {
+        padding: 4px 15px 5px;
+        padding-right: 0;
+        color: #fff;
+        cursor: default;
+        white-space: nowrap;
+    }
+
+    &:hover .navi-lang__dropdown {
+        display: block;
+    }
+
+    &__dropdown {
+        top: 10px;
+        display: none;
+        left: auto;
+        right: 10px;
+        position: absolute;
+        z-index: 1;
+        background: #fff;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, .5);
+
+        ul {
+            display: block;
+            text-align: left;
+
+            li {
+                display: block;
+                border-bottom: 1px solid #f7f7f7;
+                position: relative;
+                width: 100%;
+
+                &:hover {
+                    background-color: #f7f7f7
+                }
+
+                .lang {
+                    display: table;
+                    font-size: 13px;
+                    padding: 6px 35px 6px 14px;
+                    box-sizing: border-box;
+                    width: 100%;
+                    line-height: 21px;
+                    white-space: nowrap;
+                    color: #333;
+
+                    .icon-flag {
+                        position: absolute;
+                        display: block;
+                        right: 10px;
+                        top: 7px;
+                    }
+                }
+
+                .selected {
+                    text-shadow: -1px -1px 0 #1c83c8;
+                    cursor: default;
+                    background-color: #09f;
+                    border-bottom: 1px solid #09f;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .lang {
+        font-size: 15px;
+        line-height: 21px;
+    }
+}
+
+
+.icon-flag {
+    display: block;
+    width: 16px;
+    height: 12px;
+    border: 1px solid #f0f0f0;
+    background: #fff url(../img/flags.min.png) no-repeat;
+
+    &__ru {
+        background-position: 0 -14px;
+    }
+
+    &__en {
+        background-position: 0 0;
+    }
+
+    &__kz {
+        background-position: 0 -28px;
+    }
+}
+
+//
+// Стили тёмной шапки
+//
+
+.navi-wrapper {
+    display: flex;
+}
+
+.navi-logo-small {
+    display: inline-block;
+    width: 55px;
+    transition: width .2s linear;
+    margin-left: -15px;
+
+    @media #{$media-md} {
+        visibility: hidden;
+        overflow: hidden;
+        width: 0;
+        transform: rotateY(-90deg);
+    }
+
+    &__href {
+        display: block;
+        padding: 6px 0 6px 15px;
+        width: 40px;
+        transition: all .2s linear;
+
+        img {
+            display: block;
+            width: 28px;
+            height: 28px;
+        }
+    }
+
+    &__visible--js {
+        visibility: visible;
+        width: 55px;
+        transform: rotateY(0);
+        transition: width .2s linear;
+    }
+}
+
+.navi-items {
+    display: none;
+
+    @media #{$media-md} {
+        display: inline-block;
+    }
+
+    .navi-item__level-1 {
+        position: relative;
+        display: inline-block;
+        line-height: 40px;
+        vertical-align: top;
+
+        >a {
+            display: block;
+            padding: 0 15px;
+            white-space: nowrap;
+            color: #fff;
+            line-height: 39px;
+
+            span {
+                cursor: pointer;
+            }
+
+            &:hover {
+                background-color: #d10b0f;
+            }
+        }
+
+        >span {
+            display: block;
+            padding: 0 15px;
+            cursor: default;
+            white-space: nowrap;
+            color: #fff;
+            line-height: 39px;
+
+            &:hover {
+                background-color: #d10b0f;
+            }
+        }
+
+        &:hover .navi-sub-dropdown {
+            display: block;
+        }
+    }
+
+    .navi-sub-dropdown {
+        left: 0;
+        position: absolute;
+        display: none;
+        z-index: 1;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, .5);
+        background-color: #fff;
+    }
+
+    .navi-item__level-2 {
+        display: block;
+        border-bottom: 1px solid #f7f7f7;
+        position: relative;
+
+        &:hover {
+            background-color: #f7f7f7;
+        }
+
+        a {
+            display: table;
+            cursor: pointer;
+            padding: 6px 9px 6px 14px;
+            color: #333;
+            box-sizing: border-box;
+            width: 100%;
+            line-height: 21px;
+            white-space: nowrap;
+
+            span {
+                display: table-cell;
+                padding-right: 5px
+            }
+        }
+
+        .primary {
+            color: #00b1ee;
+
+            &:hover {
+                color: #333;
+            }
+        }
+    }
+
+    .external-link {
+        padding-right: 35px;
+    }
+
+    .external-link::after {
+        position: absolute;
+        display: block;
+        content: "";
+        right: 14px;
+        top: 12px;
+        width: 12px;
+        height: 11px;
+        background: url(../img/external-link.min.svg) 0 0 no-repeat;
+        background-size: 200%;
+    }
+}
+
+.fake-search {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    height: 28px;
+    margin: 5px 10px 0 15px;
+    padding-left: 10px;
+    width: 130px;
+    line-height: 28px;
+    cursor: text;
+    color: #999;
+    background: #fff;
+
+    &::after {
+        position: absolute;
+        right: 6px;
+        top: 6px;
+        width: 17px;
+        height: 17px;
+        content: "";
+        background: url(../img/search.min.svg) 0 0 no-repeat;
+        background-size: 300%;
+    }
+}
+
+.navi-fake-search a {
+    display: inline;
+    position: relative;
+    color: #7b7b7b;
+    font-size: 13px;
+    top: -1px;
+    transition: color .1s;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.navi-fake-search {
+    display: none;
+    opacity: 0;
+    transition: all .5s ease;
+
+    @media #{$media-lg} {
+        display: inline;
+    }
+}
+
+.navi-fake-search__visible--js {
+    opacity: 1;
+}
+
+.navi-user {
+    position: relative;
+    display: inline-block;
+    padding: 0 15px;
+    line-height: 40px;
+    right: -15px;
+    cursor: default;
+
+    &:hover {
+        background-color: #d10b0f;
+    }
+
+    span {
+        display: block;
+        position: relative;
+        top: -1px;
+    }
+}

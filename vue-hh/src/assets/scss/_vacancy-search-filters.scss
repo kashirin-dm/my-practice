@@ -1,0 +1,72 @@
+//
+// Левая колонка с фильтрами по вакансиям
+//
+//
+
+.search-filters {
+    position: fixed;
+    bottom: 15px;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #0f82ee;
+    text-align: center;
+    width: 130px;
+    z-index: 1;
+    height: 30px;
+    border-radius: 50px;
+    left: 28%;
+
+    @media #{$media-md} {
+        position: sticky;
+        position: -webkit-sticky;
+        background-color: #f9f9f9;
+        height: 665px;
+        top: 40px;
+        left: auto;
+        bottom: auto;
+        border-radius: 0;
+        font-size: 12px;
+        text-align: left;
+        width: auto;
+    }
+
+    div {
+        display: none;
+        background-color: #ededed;
+        cursor: pointer;
+        width: 100%;
+        height: auto;
+        margin: 5px 0;
+        transition: background-color .3s ease-out;
+
+        @media #{$media-md} {
+            display: block;
+            height: 120px;
+        }
+
+
+        &:hover {
+            background-color: #f9f9f9;
+        }
+
+        p {
+            padding: 10px;
+            color: rgb(97, 97, 97);
+        }
+    }
+
+    .small {
+        height: 25px;
+        margin-top: 10px;
+    }
+
+    .mobile-filter {
+        display: block;
+        background-color: transparent;
+        color: #fff;
+
+        @media #{$media-md} {
+            display: none;
+        }
+    }
+}

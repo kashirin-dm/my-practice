@@ -1,0 +1,113 @@
+//
+// Подвал
+//
+//
+
+footer {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    padding-top: 25px;
+    border-top: 1px solid #e0dfde;
+    margin: 25px 0;
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__nav {
+        >div {
+            width: 100%;
+            margin-bottom: 15px;
+
+            @media #{$media-md} {
+                margin-bottom: 0;
+            }
+        }
+
+        a {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #999;
+            display: inline-block;
+            padding-right: 6px;
+            margin-right: 17px;
+
+            @media #{$media-md} {
+                margin-right: 6px;
+                font-size: 11px;
+                line-height: 1;
+                border-right: 1px solid #e2e2e2;
+            }
+
+            &:hover {
+                color: #09f;
+            }
+        }
+
+        a:first-of-type {
+            color: #333;
+
+            &:hover {
+                color: #09f;
+            }
+        }
+
+        a:last-of-type {
+            border-right: 0;
+        }
+    }
+
+    &__social {
+        display: none;
+
+        @media #{$media-md} {
+            display: block;
+        }
+
+        a {
+            display: inline-block;
+            width: 22px;
+            height: 15px;
+            background: url(../img/footer-social.min.svg) no-repeat;
+            background-size: 127px 30px;
+        }
+
+        .fb {
+            background-position: -19px 0;
+
+            &:hover {
+                background-position: -19px -15px;
+            }
+        }
+
+        .vk {
+            width: 18px;
+
+            &:hover {
+                background-position: 0 -15px;
+            }
+        }
+
+        .insta {
+            background-position: -111px 0;
+
+            &:hover {
+                background-position: -111px -15px;
+            }
+        }
+    }
+
+    &__additional {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #999;
+
+        @media #{$media-md} {
+            font-size: 11px;
+        }
+    }
+}

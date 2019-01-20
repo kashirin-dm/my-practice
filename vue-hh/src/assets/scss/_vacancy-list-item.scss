@@ -1,0 +1,123 @@
+//
+// Одна карточка вакансии в списке вакансий
+//
+//
+
+.vacancy-item {
+    padding: 20px;
+    border: 1px solid #e7e7e7;
+    position: relative;
+    margin-top: -1px;
+    font-size: 14px;
+    line-height: 1.571;
+}
+
+.vacancy-premium {
+    border-color: #f1c846;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    flex-direction: column;
+
+    @media #{$media-md} {
+        flex-direction: row;
+    }
+}
+
+.header-info>a {
+    font-size: 18px;
+    cursor: pointer;
+
+    &:hover {
+        color: #c00;
+    }
+}
+
+.meta-info {
+    line-height: 1;
+
+    a:hover {
+        color: #cf6b60;
+    }
+
+    >* {
+        color: #999;
+        font-size: 12px;
+    }
+}
+
+.employer-verified span {
+    display: inline-block;
+    margin-left: 5px;
+    width: 16px;
+    height: 16px;
+    background: url(../img/done-icon.min.svg) 0 0 no-repeat;
+    vertical-align: middle;
+    border: 0;
+    outline: none;
+    text-decoration: none;
+    opacity: .7;
+}
+
+.header-sidebar {
+    font-size: 18px
+}
+
+.content-row {
+    display: flex;
+    margin-bottom: 6px;
+}
+
+.content-sidebar {
+    display: none;
+    margin-left: 15px;
+
+    @media #{$media-md} {
+        display: block;
+    }
+
+    img {
+        max-width: 110px;
+        max-height: 70px;
+    }
+}
+
+.contols-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contols-links {
+    a {
+        font-size: 16px;
+
+        @media #{$media-md} {
+            font-size: 14px;
+        }
+    }
+}
+
+.contols-links span:last-of-type {
+    display: none;
+
+    @media #{$media-md} {
+        display: inline;
+    }
+}
+
+.contols-links * {
+    color: #609fcf;
+    margin-right: 20px;
+
+    &:hover {
+        cursor: pointer;
+        color: #cf6b60;
+    }
+}
+
+.publication-date {
+    color: #b2b2b2;
+}

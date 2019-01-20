@@ -1,0 +1,138 @@
+//
+// Общие стили
+//
+//
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+}
+
+html,
+body {
+    min-height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+    line-height: 21px;
+}
+
+a {
+    color: #09f;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    box-sizing: border-box;
+    height: 38px;
+    padding: 0 11px;
+    border: 1px solid #cbd1d4;
+    width: 100%;
+
+    &::placeholder {
+        color: #acb5ba;
+    }
+
+    &:hover {
+        border-color: #acb5ba;
+    }
+
+    &:focus {
+        box-shadow: inset 0 2px 1px rgba(0, 0, 0, .1235);
+        border-color: #0f8fee;
+    }
+}
+
+select {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    display: inline-block;
+    box-sizing: border-box;
+    height: 38px;
+    padding: 0 11px;
+    border: 1px solid #cbd1d4;
+    color: #333;
+    padding-right: 26px;
+    background-color: #fff;
+    background-image: url(../img/select-arrows.min.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:hover {
+        border-color: #acb5ba;
+    }
+
+    &:focus {
+        border-color: #0f8fee;
+        box-shadow: 0 1px rgba(0, 0, 0, .15);
+    }
+}
+
+option {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    margin-left: 5px;
+    color: #333;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    white-space: nowrap;
+    cursor: pointer;
+    height: 38px;
+    padding: 0 15px;
+    border: 1px solid #cbd1d4;
+    font-size: 14px;
+    line-height: 36px;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        border-color: #acb5ba;
+    }
+
+    &:active {
+        background-color: #e5e5e5;
+        border-color: #0f8fee;
+        box-shadow: inset 0 2px rgba(0, 0, 0, .2), 0 1px rgba(0, 0, 0, .15);
+    }
+}
+
+.blue-btn {
+    color: #fff;
+    background-color: #0f8fee;
+    border: 1px solid #0f8fee;
+
+    &:hover {
+        background-color: #0e81d6;
+        border-color: #0e81d6;
+    }
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    line-height: 21px;
+
+    @media #{$media-xl} {
+        max-width: 1290px;
+    }
+}

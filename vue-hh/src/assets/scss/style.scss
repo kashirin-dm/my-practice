@@ -1,0 +1,23 @@
+@import './variables'; // Переменные
+
+@import './fonts'; // Шрифты
+
+@import './global'; // Общие стили
+
+@import './app-header'; // Шапка сайта
+
+@import './vacancy-list'; // Список вакансий
+
+@import './vacancy-search-filters'; // Боковой фильтр
+
+@import './vacancy-search-settings'; // Настройки сверху выдачи вакансий
+
+@import './vacancy-list-item'; // Карточка с одной вакансией
+
+@import './vacancy-pagination'; // Пагинация в списке вакансий
+
+@import './vacancy-single'; // Страница с одной полной вакансией
+
+@import './saved-search-notify'; // Фиксированный баннер с подпиской на вакансии
+
+@import './app-footer'; // Подвал сайта
